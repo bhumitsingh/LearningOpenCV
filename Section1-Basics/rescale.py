@@ -10,6 +10,12 @@ def rescaleFrame(frame, scale=0.75):
     
     return cv.resize(frame, dimensions, interpolation=cv.INTER_AREA)
 
+def changeRes(width, height):
+    # Live video
+    capture.set(3, width)
+    capture.set(4, height)
+
+
 capture = cv.VideoCapture(r'C:\Users\bhumi\Documents\LearningOpenCV\Resources\Videos\dog.mp4')
 
 while True:
